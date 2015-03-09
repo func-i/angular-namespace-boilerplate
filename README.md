@@ -3,10 +3,16 @@
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
 
-## Build & development
+### Additional Packages for Grunt Installed:
 
-Run `grunt` for building and `grunt serve` for preview.
+- bower-requirejs
+- grunt-compass-multiple
+- grunt-text-replace
 
-## Testing
 
-Running `grunt test` will run the unit tests with karma.
+### Bower Componenet Required
+
+- angularAMD
+- ui-router
+- ui-router-extras
+- oclazyload
