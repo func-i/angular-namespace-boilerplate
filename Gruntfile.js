@@ -10,9 +10,6 @@
 var env = process.env.ENV || 'development';
 console.log('\nEnvironment: ' + env + '\n');
 
-var envJson = require('./env.json');
-
-
 module.exports = function (grunt) {
 
   // Load grunt tasks automatically
@@ -36,9 +33,7 @@ module.exports = function (grunt) {
     // Set Environment from app.js or config.js
     replace: {
       config: {
-        src: [
-          '.tmp/scripts/env.js'
-        ],
+        src: [ '.tmp/scripts/env.js' ],
         overwrite: true,
         replacements: [{
           from: /{env}/,
@@ -47,6 +42,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // wire-up installed Bower compenents into RequreJS config
     bowerRequirejs: {
       target: {
         rjsConfig: '<%= yeoman.app %>/scripts/main.js',
